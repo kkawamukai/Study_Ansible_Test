@@ -1,0 +1,9 @@
+---
+- name: git checkout test via ssh
+  tasks:
+    - name: yum
+      ansible.builtin.yum:
+        name: git
+        state: present
+        update_cache: true
+      become: true
